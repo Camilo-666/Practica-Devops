@@ -18,7 +18,7 @@ pipeline {
         stage('Probar') {
             steps {
                 echo 'Ejecutando pruebas...'
-                sh 'python3 app.py'
+                bat 'python3 app.py'
             }
         }
 
