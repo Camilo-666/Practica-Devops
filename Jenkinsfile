@@ -1,32 +1,32 @@
 pipeline {
     agent any
 
+    tools {
+        // exactamente el Name que pusiste en Tools
+        python 'Python3'
+    }
+
     stages {
-
-        stage('Clonar repositorio') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Camilo-666/Practica-Devops.git'
+                // si usas Pipeline script from SCM, no hace falta; si pegas inline, añade checkout
+                checkout scm
             }
         }
 
-        stage('Construir') {
+        stage('Verificar Python') {
             steps {
-                echo 'Ejecutando build del proyecto...'
+                // bat ejecuta el comando en Windows
+                bat 'python --version'
+                bat 'where python'
             }
         }
 
-        stage('Probar') {
+        stage('Probar app') {
             steps {
-                echo 'Ejecutando pruebas...'
-                bat 'python app.py'   // ← cambia a python3 cuando sepamos cuál usas
+                // ejecuta tu app.py (se asumirá que está en el workspace tras el checkout)
+                bat 'python app.py'
             }
         }
-
-        stage('Desplegar') {
-            steps {
-                echo 'Desplegando aplicación (simulación)...'
-            }
-        }
-
     }
 }
