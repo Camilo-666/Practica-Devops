@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        
         stage('Clonar repositorio') {
             steps {
                 git branch: 'main', url: 'https://github.com/Camilo-666/Practica-Devops.git'
@@ -17,7 +18,7 @@ pipeline {
         stage('Probar') {
             steps {
                 echo 'Ejecutando pruebas...'
-                sh 'python app.py'
+                bat 'python app.py'
             }
         }
 
@@ -26,6 +27,8 @@ pipeline {
                 echo 'Desplegando aplicación (simulación)...'
             }
         }
+
     }
 }
+
 
