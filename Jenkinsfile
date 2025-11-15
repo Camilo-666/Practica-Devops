@@ -2,20 +2,20 @@ pipeline {
     agent any
 
     tools {
-        python 'Python3'   // <-- EXACTAMENTE este nombre tal cual está en tu configuración
+        python 'Python3'
     }
 
     stages {
         stage('Verificar Python') {
             steps {
-                bat 'python --version'
-                bat 'where python'
+                bat "\"${tool 'Python3'}\\python.exe\" --version"
+                bat "where python"
             }
         }
 
         stage('Probar app') {
             steps {
-                bat 'python app.py'
+                bat "\"${tool 'Python3'}\\python.exe\" app.py"
             }
         }
     }
