@@ -1,1 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: practica-devops-app:latest
+    container_name: practica-devops-app
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
 
