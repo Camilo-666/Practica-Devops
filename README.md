@@ -14,7 +14,9 @@ mi_proyecto/
 ├── docker-compose.yml
 └── README.md
 
+
 <img width="1195" height="798" alt="image" src="https://github.com/user-attachments/assets/c9de8fc6-f8b1-4467-af8e-2457454d8257" />
+
 
 Instalación local (modo desarrollo)
 1. Crear y activar entorno virtual
