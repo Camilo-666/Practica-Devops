@@ -15,6 +15,8 @@ mi_proyecto/
 └── README.md
 
 
+[Gestión de Configuración y Control de Versiones.docx](https://github.com/user-attachments/files/23670808/Gestion.de.Configuracion.y.Control.de.Versiones.docx)
+
 <img width="1195" height="798" alt="image" src="https://github.com/user-attachments/assets/c9de8fc6-f8b1-4467-af8e-2457454d8257" />
 
 <img width="1258" height="813" alt="image" src="https://github.com/user-attachments/assets/9d813f31-942a-4dae-80af-492727f55f2f" />
